@@ -11,8 +11,6 @@ class GitLabClient:
             private_token=os.environ["GITLAB_TOKEN"],
         )
 
-        self.client.auth()
-
         self.projects = []
 
         for project_url in os.environ["GITLAB_PROJECTS"].split(";"):
